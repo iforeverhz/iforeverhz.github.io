@@ -17,12 +17,12 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="数据库中的数据类型 可通过 help data types; 查询所有支持的数据类型123456789101112131415161718192021222324252627282930313233343536373839mysql&gt; help data types;You asked for help about help category: &quot;Data Types&quot;For more in">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="http://yoursite.com/2020/02/16/MySql_table/234.jpg">
+<meta property="og:image" content="http://yoursite.com/2020/02/16/image/forengh.jpg">
 <meta property="article:published_time" content="2020-02-16T09:47:01.192Z">
-<meta property="article:modified_time" content="2020-02-15T11:26:07.612Z">
+<meta property="article:modified_time" content="2020-02-16T11:07:22.615Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://yoursite.com/2020/02/16/MySql_table/234.jpg">
+<meta name="twitter:image" content="http://yoursite.com/2020/02/16/image/forengh.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -353,7 +353,7 @@
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; CREATE TABLE t_class(</span><br><span class="line">    -&gt; classno INT PRIMARY KEY,</span><br><span class="line">    -&gt; cname VARCHAR(20),</span><br><span class="line">    -&gt; loc VARCHAR(20),</span><br><span class="line">    -&gt; stucount INT);</span><br><span class="line">Query OK, 0 rows affected (0.01 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; DESC t_class;</span><br><span class="line">+<span class="comment">----------+-------------+------+-----+---------+-------+</span></span><br><span class="line">| Field    | Type        | Null | Key | Default | Extra |</span><br><span class="line">+<span class="comment">----------+-------------+------+-----+---------+-------+</span></span><br><span class="line">| classno  | int(11)     | NO   | PRI | NULL    |       |</span><br><span class="line">| cname    | varchar(20) | YES  |     | NULL    |       |</span><br><span class="line">| loc      | varchar(20) | YES  |     | NULL    |       |</span><br><span class="line">| stucount | int(11)     | YES  |     | NULL    |       |</span><br><span class="line">+<span class="comment">----------+-------------+------+-----+---------+-------+</span></span><br><span class="line">4 rows in <span class="keyword">set</span> (<span class="number">0.00</span> sec)</span><br></pre></td></tr></table></figure>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; CREATE TABLE t_student(</span><br><span class="line">    -&gt; stuno INT PRIMARY KEY ,</span><br><span class="line">    -&gt; sname VARCHAR(20),</span><br><span class="line">    -&gt; sage INT ,</span><br><span class="line">    -&gt; sgender VARCHAR(4),</span><br><span class="line">    -&gt; classno INT ,</span><br><span class="line">    -&gt; CONSTRAINT fk_classno FOREIGN KEY(classno)</span><br><span class="line">    -&gt; REFERENCES t_class(classno)</span><br><span class="line">    -&gt; );</span><br><span class="line">Query OK, 0 rows affected (0.02 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; DESC t_student;</span><br><span class="line">+<span class="comment">---------+-------------+------+-----+---------+-------+</span></span><br><span class="line">| Field   | Type        | Null | Key | Default | Extra |</span><br><span class="line">+<span class="comment">---------+-------------+------+-----+---------+-------+</span></span><br><span class="line">| stuno   | int(11)     | NO   | PRI | NULL    |       |</span><br><span class="line">| sname   | varchar(20) | YES  |     | NULL    |       |</span><br><span class="line">| sage    | int(11)     | YES  |     | NULL    |       |</span><br><span class="line">| sgender | varchar(4)  | YES  |     | NULL    |       |</span><br><span class="line">| classno | int(11)     | YES  | MUL | NULL    |       |</span><br><span class="line">+<span class="comment">---------+-------------+------+-----+---------+-------+</span></span><br><span class="line">5 rows in <span class="keyword">set</span> (<span class="number">0.00</span> sec)</span><br></pre></td></tr></table></figure>
 <p>使用架构设计器查看的效果（<a href="https://www.webyog.com/product/sqlyog" target="_blank" rel="noopener">SQLyog</a>)</p>
-<h2 id=""><a href="#" class="headerlink" title=""></a><img src="234.jpg" alt="1.jpg"></h2>
+<h2 id=""><a href="#" class="headerlink" title=""></a><img src="./../image/forengh.jpg" alt="1.jpg"></h2>
     
 
     
@@ -481,15 +481,11 @@
 
 <nav id="article-nav">
   
-    <a href="/2020/02/16/Mysql-database/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          MySQL DATABASE
-        
-      </div>
-    </a>
   
+    <a href="/2020/02/16/Mysql-database/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">MySQL DATABASE</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 
