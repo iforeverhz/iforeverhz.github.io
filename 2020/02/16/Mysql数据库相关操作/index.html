@@ -6,24 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/iforeverhz">
-  <title>MySQ,L数据查询 | iforeverhz</title>
+  <title>MySQL DATABASE | iforeverhz</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="简单查询语法句式如下： 12345SELECT filed1,filed2 ... filedn     FROM tablename    [WHERE CONDITION11]    [GROUP BY filedm [HAVING CONDITION2]]    [ORDER BY filedn [ASC|DESC]] filed1 - filedn 参数表示需要查询的字段名tablenam">
+  <meta name="description" content="MySql 数据库操作创建数据库12create database database_name;  查询所有数据库123456789101112131415show databases;mysql&gt; show databases;+--------------------+| Database           |+--------------------+| information_sc">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MySQ,L数据查询">
-<meta property="og:url" content="https://github.com/iforeverhz/2020/02/17/MySQ,L%E6%95%B0%E6%8D%AE%E6%9F%A5%E8%AF%A2/index.html">
+<meta property="og:title" content="MySQL DATABASE">
+<meta property="og:url" content="https://github.com/iforeverhz/2020/02/16/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/index.html">
 <meta property="og:site_name" content="iforeverhz">
-<meta property="og:description" content="简单查询语法句式如下： 12345SELECT filed1,filed2 ... filedn     FROM tablename    [WHERE CONDITION11]    [GROUP BY filedm [HAVING CONDITION2]]    [ORDER BY filedn [ASC|DESC]] filed1 - filedn 参数表示需要查询的字段名tablenam">
+<meta property="og:description" content="MySql 数据库操作创建数据库12create database database_name;  查询所有数据库123456789101112131415show databases;mysql&gt; show databases;+--------------------+| Database           |+--------------------+| information_sc">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://github.com/iforeverhz/2020/02/17/image/selct1.jpg">
-<meta property="og:image" content="https://github.com/iforeverhz/2020/02/17/image/select2.jpg">
-<meta property="article:published_time" content="2020-02-17T02:27:55.368Z">
-<meta property="article:modified_time" content="2020-02-17T14:46:59.437Z">
+<meta property="article:published_time" content="2020-02-16T09:47:01.192Z">
+<meta property="article:modified_time" content="2020-05-23T12:13:43.901Z">
 <meta property="article:author" content="Coderyy">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://github.com/iforeverhz/2020/02/17/image/selct1.jpg">
   
     <link rel="alternative" href="/atom.xml" title="iforeverhz" type="application/atom+xml">
   
@@ -178,14 +175,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-MySQ,L数据查询" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Mysql数据库相关操作" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      MySQ,L数据查询
+      MySQL DATABASE
     </h1>
   
 
@@ -197,8 +194,8 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2020/02/17/MySQ,L%E6%95%B0%E6%8D%AE%E6%9F%A5%E8%AF%A2/" class="archive-article-date">
-        <time datetime="2020-02-17T02:27:55.368Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-17</time>
+<a href="/2020/02/16/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" class="archive-article-date">
+        <time datetime="2020-02-16T09:47:01.192Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-16</time>
 </a>
 
   
@@ -211,7 +208,7 @@
       <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
       <i class="icon-statistics"></i>
       <span class="post-meta-item-text"> 字数统计:</span>
-      <span class="post-count">802字</span>
+      <span class="post-count">93字</span>
     </span>
   </span>
 
@@ -220,7 +217,7 @@
     <span class="post-meta-item-icon">
       <i class="icon-book icon"></i>
       <span class="post-meta-item-text"> 阅读时长≈</span>
-      <span class="post-count">3分</span>
+      <span class="post-count">1分</span>
     </span>
   </span>
 </div>
@@ -231,78 +228,14 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h2 id="简单查询"><a href="#简单查询" class="headerlink" title="简单查询"></a>简单查询</h2><p>语法句式如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SELECT filed1,filed2 ... filedn </span><br><span class="line">    FROM tablename</span><br><span class="line">    [WHERE CONDITION11]</span><br><span class="line">    [GROUP BY filedm [HAVING CONDITION2]]</span><br><span class="line">    [ORDER BY filedn [ASC|DESC]]</span><br></pre></td></tr></table></figure>
-<p>filed1 - filedn 参数表示<strong>需要查询的字段名</strong><br><br>tablename 参数表示<strong>表的名称</strong><br><br>CONDITION1 参数表示<strong>查询条件</strong><br><br>filedm 参数表示<strong>按该字段中的数据进行分组</strong><br><br>CONDITION2 参数表示<strong>满足该表达式的数据才能输出</strong><br><br>filen 参数表示<strong>按该字段中的数据进行排序</strong> <strong><em>ASC</em></strong> 表示 <strong>升序</strong> <strong>DESC</strong> 表示<strong>升序</strong></p>
-<h3 id="查询所有字段数据"><a href="#查询所有字段数据" class="headerlink" title="查询所有字段数据"></a>查询所有字段数据</h3><ol>
-<li>列出表的所有字段<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> filed1,filed2,...filedn <span class="keyword">FROM</span> tablenamee;</span><br></pre></td></tr></table></figure>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT name,sex,age FROM t_stu;</span><br><span class="line">+<span class="comment">------+-------+------+</span></span><br><span class="line">| name | sex   | age  |</span><br><span class="line">+<span class="comment">------+-------+------+</span></span><br><span class="line">| jack | woman |   18 |</span><br><span class="line">| jim  | woman |   15 |</span><br><span class="line">| tom  | man   |   15 |</span><br><span class="line">+<span class="comment">------+-------+------+</span></span><br><span class="line">3 rows in <span class="keyword">set</span> (<span class="number">0.00</span> sec)</span><br></pre></td></tr></table></figure></li>
-<li><strong>“*”</strong>的使用<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> filed1,filed2,...filedn <span class="keyword">FROM</span> tablenamee;</span><br></pre></td></tr></table></figure>
+    <h1 id="MySql-数据库操作"><a href="#MySql-数据库操作" class="headerlink" title="MySql 数据库操作"></a>MySql 数据库操作</h1><h2 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">database</span> database_name;</span><br></pre></td></tr></table></figure>
 
-</li>
-</ol>
-<h3 id="查询指定字段数据"><a href="#查询指定字段数据" class="headerlink" title="查询指定字段数据"></a>查询指定字段数据</h3><p>例如：从学生表中姓名、性别和年龄字段</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">name</span>,sex,age <span class="keyword">FROM</span> t_student;</span><br></pre></td></tr></table></figure>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT *FROM t_stu;</span><br><span class="line">+<span class="comment">------+-------+------+</span></span><br><span class="line">| name | sex   | age  |</span><br><span class="line">+<span class="comment">------+-------+------+</span></span><br><span class="line">| jack | woman |   18 |</span><br><span class="line">| jim  | woman |   15 |</span><br><span class="line">| tom  | man   |   15 |</span><br><span class="line">+<span class="comment">------+-------+------+</span></span><br><span class="line">3 rows in <span class="keyword">set</span> (<span class="number">0.00</span> sec)</span><br></pre></td></tr></table></figure>
+<h2 id="查询所有数据库"><a href="#查询所有数据库" class="headerlink" title="查询所有数据库"></a>查询所有数据库</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">show</span> <span class="keyword">databases</span>;</span><br><span class="line"></span><br><span class="line">mysql&gt; show databases;</span><br><span class="line">+<span class="comment">--------------------+</span></span><br><span class="line">| Database           |</span><br><span class="line">+<span class="comment">--------------------+</span></span><br><span class="line">| information_schema |</span><br><span class="line">| db_demo            |</span><br><span class="line">| mysql              |</span><br><span class="line">| performance_schema |</span><br><span class="line">| test               |</span><br><span class="line">+<span class="comment">--------------------+</span></span><br><span class="line">5 rows in <span class="keyword">set</span> (<span class="number">0.00</span> sec)</span><br><span class="line">&lt;!<span class="comment">--more--&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="选择数据库"><a href="#选择数据库" class="headerlink" title="选择数据库"></a>选择数据库</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">use</span> database_name;</span><br><span class="line"></span><br><span class="line">mysql&gt; use db_demo;</span><br><span class="line">Database changed</span><br></pre></td></tr></table></figure>
+<h2 id="删除数据库"><a href="#删除数据库" class="headerlink" title="删除数据库"></a>删除数据库</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">drop</span> <span class="keyword">database</span> database_name;</span><br><span class="line"></span><br><span class="line">mysql&gt; drop database db_demo;</span><br><span class="line">Query OK, 0 rows affected (0.00 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; show databases;</span><br><span class="line">+<span class="comment">--------------------+</span></span><br><span class="line">| Database           |</span><br><span class="line">+<span class="comment">--------------------+</span></span><br><span class="line">| information_schema |</span><br><span class="line">| mysql              |</span><br><span class="line">| performance_schema |</span><br><span class="line">| test               |</span><br><span class="line">+<span class="comment">--------------------+</span></span><br><span class="line">4 rows in <span class="keyword">set</span> (<span class="number">0.00</span> sec)</span><br></pre></td></tr></table></figure>
 
-<h3 id="DISTINCT-查询"><a href="#DISTINCT-查询" class="headerlink" title="DISTINCT 查询"></a>DISTINCT 查询</h3><p><strong>实现查询不重复数据</strong></p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> filed1,filed2...filedn <span class="keyword">FROM</span> tablename;</span><br></pre></td></tr></table></figure>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT DISTINCT sex FROM t_stu;</span><br><span class="line">+<span class="comment">-------+</span></span><br><span class="line">| sex   |</span><br><span class="line">+<span class="comment">-------+</span></span><br><span class="line">| woman |</span><br><span class="line">| man   |</span><br><span class="line">+<span class="comment">-------+</span></span><br><span class="line">2 rows in <span class="keyword">set</span> (<span class="number">0.00</span> sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; <span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> age <span class="keyword">FROM</span> t_stu;</span><br><span class="line">+<span class="comment">------+</span></span><br><span class="line">| age  |</span><br><span class="line">+<span class="comment">------+</span></span><br><span class="line">|   18 |</span><br><span class="line">|   15 |</span><br><span class="line">+<span class="comment">------+</span></span><br><span class="line">2 rows in <span class="keyword">set</span> (<span class="number">0.00</span> sec)</span><br></pre></td></tr></table></figure>
 
-<h3 id="IN-查询"><a href="#IN-查询" class="headerlink" title="IN 查询"></a>IN 查询</h3><p><strong>判断字段的数值是否在指定集合的条件查询</strong></p>
-<h4 id="1-在集合中的记录查询"><a href="#1-在集合中的记录查询" class="headerlink" title="1. 在集合中的记录查询"></a>1. 在集合中的记录查询</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> filed1,filed2,...,filedn <span class="keyword">FROM</span> tablename <span class="keyword">WHERE</span> filedm <span class="keyword">IN</span>(value1,value2,...,valuen);</span><br></pre></td></tr></table></figure>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT name,age FROM t_stu WHERE age IN(15 ,17,16);</span><br><span class="line">+<span class="comment">------+------+</span></span><br><span class="line">| name | age  |</span><br><span class="line">+<span class="comment">------+------+</span></span><br><span class="line">| jim  |   15 |</span><br><span class="line">| tom  |   15 |</span><br><span class="line">+<span class="comment">------+------+</span></span><br><span class="line">2 rows in <span class="keyword">set</span> (<span class="number">0.00</span> sec)</span><br></pre></td></tr></table></figure>
 
-<h4 id="2-不在集合中的记录查询"><a href="#2-不在集合中的记录查询" class="headerlink" title="2. 不在集合中的记录查询"></a>2. 不在集合中的记录查询</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> filed1,filed2,...,filedn <span class="keyword">FROM</span> tablename <span class="keyword">WHERE</span> filedm <span class="keyword">NOT</span> <span class="keyword">IN</span>(value1,value2,...,valuen);</span><br></pre></td></tr></table></figure>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT name,age FROM t_stu WHERE age NOT  IN(15 ,17,16);</span><br><span class="line">+<span class="comment">------+------+</span></span><br><span class="line">| name | age  |</span><br><span class="line">+<span class="comment">------+------+</span></span><br><span class="line">| jack |   18 |</span><br><span class="line">+<span class="comment">------+------+</span></span><br><span class="line">1 row in <span class="keyword">set</span> (<span class="number">0.00</span> sec)</span><br></pre></td></tr></table></figure>
-<h4 id="3-集合查询的注意点"><a href="#3-集合查询的注意点" class="headerlink" title="3. 集合查询的注意点"></a>3. 集合查询的注意点</h4><p>在具体使用关键字<strong>IN</strong>时<br><br>查询的集合中如果存在<strong>NULL</strong>，则不会影响查询<br>使用关键字<strong>NOT IN</strong>时，则不会有任何查询结果</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT name,age FROM t_stu WHERE age IN(15 ,17,16,NULL);</span><br><span class="line">+<span class="comment">------+------+</span></span><br><span class="line">| name | age  |</span><br><span class="line">+<span class="comment">------+------+</span></span><br><span class="line">| jim  |   15 |</span><br><span class="line">| tom  |   15 |</span><br><span class="line">+<span class="comment">------+------+</span></span><br><span class="line">2 rows in <span class="keyword">set</span> (<span class="number">0.00</span> sec)</span><br></pre></td></tr></table></figure>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT name,age FROM t_stu WHERE age NOT IN(15 ,17,16,NULL);</span><br><span class="line">Empty <span class="keyword">set</span> (<span class="number">0.00</span> sec)</span><br></pre></td></tr></table></figure>
-<h3 id="BETWEEN-AND-查询"><a href="#BETWEEN-AND-查询" class="headerlink" title="BETWEEN AND 查询"></a>BETWEEN AND 查询</h3><p>实现判断字段的数值是否在指定范围内的条件查询</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> filed1,filed2,...,filedn </span><br><span class="line"><span class="keyword">FROM</span> tablename <span class="keyword">WHERE</span> filedm <span class="keyword">BETWEEN</span> <span class="keyword">minvalue</span> <span class="keyword">AND</span> maxvalue;</span><br></pre></td></tr></table></figure>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">  mysql&gt; SELECT *FROM t_stu WHERE age BETWEEN 15 AND 30;</span><br><span class="line">+<span class="comment">--------+-------+------+</span></span><br><span class="line">| name   | sex   | age  |</span><br><span class="line">+<span class="comment">--------+-------+------+</span></span><br><span class="line">| jack   | woman |   18 |</span><br><span class="line">| jim    | woman |   15 |</span><br><span class="line">| tom    | man   |   15 |</span><br><span class="line">| 小花   | woman |   25 |</span><br><span class="line">+<span class="comment">--------+-------+------+</span></span><br><span class="line">4 rows in <span class="keyword">set</span> (<span class="number">0.00</span> sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; <span class="keyword">SELECT</span> *<span class="keyword">FROM</span> t_stu <span class="keyword">WHERE</span> age <span class="keyword">BETWEEN</span> <span class="number">16</span> <span class="keyword">AND</span> <span class="number">30</span>;</span><br><span class="line">+<span class="comment">--------+-------+------+</span></span><br><span class="line">| name   | sex   | age  |</span><br><span class="line">+<span class="comment">--------+-------+------+</span></span><br><span class="line">| jack   | woman |   18 |</span><br><span class="line">| 小花   | woman |   25 |</span><br><span class="line">+<span class="comment">--------+-------+------+</span></span><br><span class="line">2 rows in <span class="keyword">set</span> (<span class="number">0.00</span> sec)</span><br></pre></td></tr></table></figure>
-
-<p>一点小问题:关于字符编码</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; insert into t_stu values("小花",'woman',25);</span><br><span class="line">ERROR 1366 (HY000): Incorrect string value: '\xE5\xB0\x8F\xE8\x8A\xB1' for column 'name' at row 1</span><br></pre></td></tr></table></figure>
-<p>插入数据失败 查看建表信息</p>
-<p><img src="../image/selct1.jpg" alt=""></p>
-<p>解决连接<a href="https://blog.csdn.net/ch717828/article/details/41357431" target="_blank" rel="noopener">CSDN</a></p>
-<p><img src="../image/select2.jpg" alt=""></p>
-<h3 id="LIKE-模糊查询"><a href="#LIKE-模糊查询" class="headerlink" title="LIKE 模糊查询"></a>LIKE 模糊查询</h3><p>语法句式如下：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> filed1,filed2,...,filedn</span><br><span class="line"><span class="keyword">FROM</span> tablename <span class="keyword">WHERE</span> filedm <span class="keyword">LIKE</span> <span class="keyword">value</span>;</span><br></pre></td></tr></table></figure>
-<p><strong>LIKE</strong>关键字支持的通配符</p>
-<table>
-<thead>
-<tr>
-<th align="center">符号</th>
-<th align="left">功能描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="center">_</td>
-<td align="left">该通配符能匹配单个字符</td>
-</tr>
-<tr>
-<td align="center">%</td>
-<td align="left">该通配符能匹配任意长度的字符串</td>
-</tr>
-</tbody></table>
-<ol>
-<li><p>带有 <strong>%</strong> 通配符的查询</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>带有 <strong>_</strong> 通配符的查询</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<h3 id="对查询结果进行排序"><a href="#对查询结果进行排序" class="headerlink" title="对查询结果进行排序"></a>对查询结果进行排序</h3><p>语法句式如下：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> filed1,filed2,...,filedn</span><br><span class="line"><span class="keyword">FROM</span> tablename <span class="keyword">ORDER</span> <span class="keyword">BY</span> filedm [<span class="keyword">ASC</span>|<span class="keyword">DESC</span>];</span><br></pre></td></tr></table></figure>
-
-<h3 id="简单分组查询"><a href="#简单分组查询" class="headerlink" title="简单分组查询"></a>简单分组查询</h3><p>语法句式如下：</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="keyword">function</span>()</span><br><span class="line"><span class="keyword">FROM</span> tablename <span class="keyword">WHERE</span> CONDITION <span class="keyword">GROUP</span> <span class="keyword">BY</span> filed;</span><br></pre></td></tr></table></figure>
-
-<h3 id="统计分组查询"><a href="#统计分组查询" class="headerlink" title="统计分组查询"></a>统计分组查询</h3><h2 id="联合查询"><a href="#联合查询" class="headerlink" title="联合查询"></a>联合查询</h2>
     
 
     
@@ -348,7 +281,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="https:/github.com/iforeverhz/2020/02/17/MySQ,L数据查询/" title="MySQ,L数据查询" target="_blank">https:/github.com/iforeverhz/2020/02/17/MySQ,L数据查询/</a>
+          <a href="https:/github.com/iforeverhz/2020/02/16/Mysql数据库相关操作/" title="MySQL DATABASE" target="_blank">https:/github.com/iforeverhz/2020/02/16/Mysql数据库相关操作/</a>
         </li>
         
         <li>
@@ -415,7 +348,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://github.com/iforeverhz/2020/02/17/MySQ,L%E6%95%B0%E6%8D%AE%E6%9F%A5%E8%AF%A2/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://github.com/iforeverhz/2020/02/16/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -430,20 +363,15 @@
 
 <nav id="article-nav">
   
-    <a href="/2020/03/19/mysql%E8%BF%9E%E6%8E%A5%E5%A4%B1%E8%B4%A5%E5%8E%9F%E5%9B%A0/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/02/16/MySql%E8%A1%A8%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          mysql连接失败原因
+          MySQL TABLE
         
       </div>
     </a>
   
-  
-    <a href="/2020/02/16/Mysql-database/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">MySQL DATABASE</div>
-      <i class="icon-circle-right"></i>
-    </a>
   
 </nav>
 
