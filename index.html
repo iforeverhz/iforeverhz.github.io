@@ -103,6 +103,18 @@
 				
 			</div>
 		
+			
+			
+			
+			
+			<div>
+				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="240" height="86" src="//music.163.com/outchain/player?type=2&id=1334445174&auto=0&height=66"></iframe>
+			</div>
+			
+				
+				<p style="font-size: 12px;">这似乎是首纯音乐，请尽情的欣赏它吧！<p>
+			
+		
 		</nav>
 	</header>		
 </div>
@@ -286,14 +298,6 @@
     
     <h2 id="简单查询"><a href="#简单查询" class="headerlink" title="简单查询"></a>简单查询</h2><p>语法句式如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SELECT filed1,filed2 ... filedn </span><br><span class="line">    FROM tablename</span><br><span class="line">    [WHERE CONDITION11]</span><br><span class="line">    [GROUP BY filedm [HAVING CONDITION2]]</span><br><span class="line">    [ORDER BY filedn [ASC|DESC]]</span><br></pre></td></tr></table></figure>
-<p>filed1 - filedn 参数表示<strong>需要查询的字段名</strong><br><br>tablename 参数表示<strong>表的名称</strong><br><br>CONDITION1 参数表示<strong>查询条件</strong><br><br>filedm 参数表示<strong>按该字段中的数据进行分组</strong><br><br>CONDITION2 参数表示<strong>满足该表达式的数据才能输出</strong><br><br>filen 参数表示<strong>按该字段中的数据进行排序</strong> <strong><em>ASC</em></strong> 表示 <strong>升序</strong> <strong>DESC</strong> 表示<strong>降序</strong></p>
-<h3 id="查询所有字段数据"><a href="#查询所有字段数据" class="headerlink" title="查询所有字段数据"></a>查询所有字段数据</h3><ol>
-<li>列出表的所有字段</li>
-</ol>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> filed1,filed2,...filedn <span class="keyword">FROM</span> tablenamee;</span><br></pre></td></tr></table></figure>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT name,sex,age FROM t_stu;</span><br><span class="line">+<span class="comment">------+-------+------+</span></span><br><span class="line">| name | sex   | age  |</span><br><span class="line">+<span class="comment">------+-------+------+</span></span><br><span class="line">| jack | woman |   18 |</span><br><span class="line">| jim  | woman |   15 |</span><br><span class="line">| tom  | man   |   15 |</span><br><span class="line">+<span class="comment">------+-------+------+</span></span><br><span class="line">3 rows in <span class="keyword">set</span> (<span class="number">0.00</span> sec)</span><br></pre></td></tr></table></figure>
-<ol>
-<li>”*“ 的使用<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> filed1,filed2,...filedn <span class="keyword">FROM</span> tablenamee;</span><br></pre></td></tr></table></figure>
     
     <a class="article-more-a" href="/2020/02/17/MySQL%E6%95%B0%E6%8D%AE%E6%9F%A5%E8%AF%A2/#more">more >></a>
     
@@ -371,7 +375,7 @@
   <div class="article-entry" itemprop="articleBody">
     
     <h2 id="数据库中的数据类型"><a href="#数据库中的数据类型" class="headerlink" title="数据库中的数据类型"></a>数据库中的数据类型</h2><hr>
-<h3 id="可通过-help-data-types-查询所有支持的数据类型"><a href="#可通过-help-data-types-查询所有支持的数据类型" class="headerlink" title="可通过 help data types; 查询所有支持的数据类型"></a>可通过 help data types; 查询所有支持的数据类型</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; help data types;</span><br><span class="line">You asked for <span class="keyword">help</span> about <span class="keyword">help</span> <span class="keyword">category</span>: <span class="string">"Data Types"</span></span><br><span class="line"><span class="keyword">For</span> more information, <span class="keyword">type</span> <span class="string">'help &lt;item&gt;'</span>, <span class="keyword">where</span> &lt;item&gt; <span class="keyword">is</span> one <span class="keyword">of</span> the <span class="keyword">following</span></span><br><span class="line">topics:</span><br><span class="line">   AUTO_INCREMENT </span><br><span class="line">   <span class="built_in">BIGINT</span></span><br><span class="line">   <span class="built_in">BINARY</span></span><br><span class="line">   <span class="built_in">BIT</span></span><br><span class="line">   <span class="built_in">BLOB</span></span><br><span class="line">   <span class="built_in">BLOB</span> <span class="keyword">DATA</span> <span class="keyword">TYPE</span></span><br><span class="line">   <span class="built_in">BOOLEAN</span></span><br><span class="line">   <span class="built_in">CHAR</span></span><br><span class="line">   <span class="built_in">CHAR</span> <span class="keyword">BYTE</span></span><br><span class="line">   <span class="built_in">DATE</span></span><br><span class="line">   DATETIME</span><br><span class="line">   <span class="built_in">DEC</span></span><br><span class="line">   <span class="built_in">DECIMAL</span></span><br><span class="line">   <span class="keyword">DOUBLE</span></span><br><span class="line">   <span class="keyword">DOUBLE</span> <span class="keyword">PRECISION</span></span><br><span class="line">   ENUM</span><br><span class="line">   <span class="built_in">FLOAT</span></span><br><span class="line">   <span class="built_in">INT</span></span><br><span class="line">   <span class="built_in">INTEGER</span></span><br><span class="line">   LONGBLOB</span><br><span class="line">   LONGTEXT</span><br><span class="line">   MEDIUMBLOB</span><br><span class="line">   MEDIUMINT</span><br><span class="line">   MEDIUMTEXT</span><br><span class="line">   <span class="keyword">SET</span> <span class="keyword">DATA</span> <span class="keyword">TYPE</span></span><br><span class="line">   <span class="built_in">SMALLINT</span></span><br><span class="line">   <span class="built_in">TEXT</span></span><br><span class="line">   <span class="built_in">TIME</span></span><br><span class="line">   <span class="built_in">TIMESTAMP</span></span><br><span class="line">   TINYBLOB</span><br><span class="line">   <span class="built_in">TINYINT</span></span><br><span class="line">   TINYTEXT</span><br><span class="line">   VARBINARY</span><br><span class="line">   <span class="built_in">VARCHAR</span></span><br><span class="line">   <span class="keyword">YEAR</span> <span class="keyword">DATA</span> <span class="keyword">TYPE</span></span><br></pre></td></tr></table></figure>
+<h3 id="可通过-help-data-types-查询所有支持的数据类型"><a href="#可通过-help-data-types-查询所有支持的数据类型" class="headerlink" title="可通过 help data types; 查询所有支持的数据类型"></a>可通过 help data types; 查询所有支持的数据类型</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; help data types;</span><br></pre></td></tr></table></figure>
     
     <a class="article-more-a" href="/2020/02/16/MySql%E8%A1%A8%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/#more">more >></a>
     
@@ -449,13 +453,9 @@
   <div class="article-entry" itemprop="articleBody">
     
     <h1 id="MySql-数据库操作"><a href="#MySql-数据库操作" class="headerlink" title="MySql 数据库操作"></a>MySql 数据库操作</h1><h2 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">database</span> database_name;</span><br></pre></td></tr></table></figure>
-
-<h2 id="查询所有数据库"><a href="#查询所有数据库" class="headerlink" title="查询所有数据库"></a>查询所有数据库</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">show</span> <span class="keyword">databases</span>;</span><br><span class="line"></span><br><span class="line">mysql&gt; show databases;</span><br><span class="line">+<span class="comment">--------------------+</span></span><br><span class="line">| Database           |</span><br><span class="line">+<span class="comment">--------------------+</span></span><br><span class="line">| information_schema |</span><br><span class="line">| db_demo            |</span><br><span class="line">| mysql              |</span><br><span class="line">| performance_schema |</span><br><span class="line">| test               |</span><br><span class="line">+<span class="comment">--------------------+</span></span><br><span class="line">5 rows in <span class="keyword">set</span> (<span class="number">0.00</span> sec)</span><br><span class="line">&lt;!<span class="comment">--more--&gt;</span></span><br></pre></td></tr></table></figure>
-<h2 id="选择数据库"><a href="#选择数据库" class="headerlink" title="选择数据库"></a>选择数据库</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">use</span> database_name;</span><br><span class="line"></span><br><span class="line">mysql&gt; use db_demo;</span><br><span class="line">Database changed</span><br></pre></td></tr></table></figure>
-<h2 id="删除数据库"><a href="#删除数据库" class="headerlink" title="删除数据库"></a>删除数据库</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">drop</span> <span class="keyword">database</span> database_name;</span><br><span class="line"></span><br><span class="line">mysql&gt; drop database db_demo;</span><br><span class="line">Query OK, 0 rows affected (0.00 sec)</span><br><span class="line"></span><br><span class="line">mysql&gt; show databases;</span><br><span class="line">+<span class="comment">--------------------+</span></span><br><span class="line">| Database           |</span><br><span class="line">+<span class="comment">--------------------+</span></span><br><span class="line">| information_schema |</span><br><span class="line">| mysql              |</span><br><span class="line">| performance_schema |</span><br><span class="line">| test               |</span><br><span class="line">+<span class="comment">--------------------+</span></span><br><span class="line">4 rows in <span class="keyword">set</span> (<span class="number">0.00</span> sec)</span><br></pre></td></tr></table></figure>
-
-
-
+    
+    <a class="article-more-a" href="/2020/02/16/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/#more">more >></a>
+    
     
 
     
@@ -862,6 +862,16 @@
 </script>
 
   
+  
+  <script type="text/javascript" src="/lib/snow.js"></script>
+  <script type="text/javascript" src="/lib/jquery-2.1.4.min.js"></script>
+  <script>
+    snow.down();
+    $(window).resize(function() {
+      $("canvas").css("z-index","500").remove();
+      snow.down();
+    });
+  </script>
   
 </body>
 

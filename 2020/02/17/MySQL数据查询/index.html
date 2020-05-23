@@ -10,17 +10,17 @@
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-  <meta name="description" content="简单查询语法句式如下： 12345SELECT filed1,filed2 ... filedn     FROM tablename    [WHERE CONDITION11]    [GROUP BY filedm [HAVING CONDITION2]]    [ORDER BY filedn [ASC|DESC]] filed1 - filedn 参数表示需要查询的字段名tablenam">
+  <meta name="description" content="简单查询语法句式如下： 12345SELECT filed1,filed2 ... filedn     FROM tablename    [WHERE CONDITION11]    [GROUP BY filedm [HAVING CONDITION2]]    [ORDER BY filedn [ASC|DESC]]">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MySQL数据查询">
 <meta property="og:url" content="https://github.com/iforeverhz/2020/02/17/MySQL%E6%95%B0%E6%8D%AE%E6%9F%A5%E8%AF%A2/index.html">
 <meta property="og:site_name" content="iforeverhz">
-<meta property="og:description" content="简单查询语法句式如下： 12345SELECT filed1,filed2 ... filedn     FROM tablename    [WHERE CONDITION11]    [GROUP BY filedm [HAVING CONDITION2]]    [ORDER BY filedn [ASC|DESC]] filed1 - filedn 参数表示需要查询的字段名tablenam">
+<meta property="og:description" content="简单查询语法句式如下： 12345SELECT filed1,filed2 ... filedn     FROM tablename    [WHERE CONDITION11]    [GROUP BY filedm [HAVING CONDITION2]]    [ORDER BY filedn [ASC|DESC]]">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://github.com/iforeverhz/2020/02/17/image/selct1.jpg">
 <meta property="og:image" content="https://github.com/iforeverhz/2020/02/17/image/select2.jpg">
 <meta property="article:published_time" content="2020-02-17T02:27:55.368Z">
-<meta property="article:modified_time" content="2020-05-23T12:05:39.201Z">
+<meta property="article:modified_time" content="2020-05-23T12:34:15.980Z">
 <meta property="article:author" content="Coderyy">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://github.com/iforeverhz/2020/02/17/image/selct1.jpg">
@@ -105,6 +105,18 @@
 					<a class="csdn" href="https://blog.csdn.net/qq_43040952" title="CSDN" target="_blank"><i class="icon-csdn"></i></a>
 				
 			</div>
+		
+			
+			
+			
+			
+			<div>
+				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="240" height="86" src="//music.163.com/outchain/player?type=2&id=1334445174&auto=0&height=66"></iframe>
+			</div>
+			
+				
+				<p style="font-size: 12px;">这似乎是首纯音乐，请尽情的欣赏它吧！<p>
+			
 		
 		</nav>
 	</header>		
@@ -233,6 +245,8 @@
     
     <h2 id="简单查询"><a href="#简单查询" class="headerlink" title="简单查询"></a>简单查询</h2><p>语法句式如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SELECT filed1,filed2 ... filedn </span><br><span class="line">    FROM tablename</span><br><span class="line">    [WHERE CONDITION11]</span><br><span class="line">    [GROUP BY filedm [HAVING CONDITION2]]</span><br><span class="line">    [ORDER BY filedn [ASC|DESC]]</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+
 <p>filed1 - filedn 参数表示<strong>需要查询的字段名</strong><br><br>tablename 参数表示<strong>表的名称</strong><br><br>CONDITION1 参数表示<strong>查询条件</strong><br><br>filedm 参数表示<strong>按该字段中的数据进行分组</strong><br><br>CONDITION2 参数表示<strong>满足该表达式的数据才能输出</strong><br><br>filen 参数表示<strong>按该字段中的数据进行排序</strong> <strong><em>ASC</em></strong> 表示 <strong>升序</strong> <strong>DESC</strong> 表示<strong>降序</strong></p>
 <h3 id="查询所有字段数据"><a href="#查询所有字段数据" class="headerlink" title="查询所有字段数据"></a>查询所有字段数据</h3><ol>
 <li>列出表的所有字段</li>
@@ -241,7 +255,7 @@
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; SELECT name,sex,age FROM t_stu;</span><br><span class="line">+<span class="comment">------+-------+------+</span></span><br><span class="line">| name | sex   | age  |</span><br><span class="line">+<span class="comment">------+-------+------+</span></span><br><span class="line">| jack | woman |   18 |</span><br><span class="line">| jim  | woman |   15 |</span><br><span class="line">| tom  | man   |   15 |</span><br><span class="line">+<span class="comment">------+-------+------+</span></span><br><span class="line">3 rows in <span class="keyword">set</span> (<span class="number">0.00</span> sec)</span><br></pre></td></tr></table></figure>
 <ol>
 <li>”*“ 的使用<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> filed1,filed2,...filedn <span class="keyword">FROM</span> tablenamee;</span><br></pre></td></tr></table></figure>
-<a id="more"></a>
+
 
 </li>
 </ol>
@@ -331,11 +345,6 @@
                     <span class="reward-type">支付宝</span>
                   </div>
                   
-                  
-                  <div class="reward-box-item">
-                    <img class="reward-img" src="/img/weixin.png">
-                    <span class="reward-type">微信</span>
-                  </div>
                   
                 </div>
               </span>
@@ -843,6 +852,16 @@
 </script>
 
   
+  
+  <script type="text/javascript" src="/lib/snow.js"></script>
+  <script type="text/javascript" src="/lib/jquery-2.1.4.min.js"></script>
+  <script>
+    snow.down();
+    $(window).resize(function() {
+      $("canvas").css("z-index","500").remove();
+      snow.down();
+    });
+  </script>
   
 </body>
 
