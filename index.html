@@ -190,7 +190,7 @@
             
 
   
-    <article id="post-mysql连接失败原因" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Mysql/mysql连接失败原因" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -198,7 +198,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2020/03/19/mysql%E8%BF%9E%E6%8E%A5%E5%A4%B1%E8%B4%A5%E5%8E%9F%E5%9B%A0/" target="_blank">mysql连接失败原因</a>
+	  <a class="article-title" href="/2020/03/19/Mysql/mysql%E8%BF%9E%E6%8E%A5%E5%A4%B1%E8%B4%A5%E5%8E%9F%E5%9B%A0/" target="_blank">Mysql/mysql连接失败原因</a>
   
     </h1>
   
@@ -206,7 +206,7 @@
 
   
   
-<a href="/2020/03/19/mysql%E8%BF%9E%E6%8E%A5%E5%A4%B1%E8%B4%A5%E5%8E%9F%E5%9B%A0/" class="archive-article-date">
+<a href="/2020/03/19/Mysql/mysql%E8%BF%9E%E6%8E%A5%E5%A4%B1%E8%B4%A5%E5%8E%9F%E5%9B%A0/" class="archive-article-date">
         <time datetime="2020-03-19T07:58:35.978Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-19</time>
 </a>
 
@@ -219,7 +219,7 @@
   
   <div class="article-entry" itemprop="articleBody">
     
-    <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@iZw181s055hmtpZ /]<span class="comment"># mysql -u root -p</span></span><br><span class="line">Enter password: </span><br><span class="line">ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)</span><br></pre></td></tr></table></figure>
+    <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@************ /]# mysql -u root -p</span><br><span class="line">Enter password: </span><br><span class="line">ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)</span><br></pre></td></tr></table></figure>
 <h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>重启mysql服务</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysql <span class="keyword">start</span></span><br></pre></td></tr></table></figure>
 
@@ -237,7 +237,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/2020/03/19/mysql%E8%BF%9E%E6%8E%A5%E5%A4%B1%E8%B4%A5%E5%8E%9F%E5%9B%A0/">展开全文 >></a>
+      <a class="article-more-a" href="/2020/03/19/Mysql/mysql%E8%BF%9E%E6%8E%A5%E5%A4%B1%E8%B4%A5%E5%8E%9F%E5%9B%A0/">展开全文 >></a>
     </p>
     
 
@@ -267,7 +267,7 @@
 
 
   
-    <article id="post-MySQL数据查询" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Mysql/MySQL数据查询" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -275,7 +275,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2020/02/17/MySQL%E6%95%B0%E6%8D%AE%E6%9F%A5%E8%AF%A2/" target="_blank">MySQL数据查询</a>
+	  <a class="article-title" href="/2020/02/17/Mysql/MySQL%E6%95%B0%E6%8D%AE%E6%9F%A5%E8%AF%A2/" target="_blank">Mysql/MySQL数据查询</a>
   
     </h1>
   
@@ -283,7 +283,7 @@
 
   
   
-<a href="/2020/02/17/MySQL%E6%95%B0%E6%8D%AE%E6%9F%A5%E8%AF%A2/" class="archive-article-date">
+<a href="/2020/02/17/Mysql/MySQL%E6%95%B0%E6%8D%AE%E6%9F%A5%E8%AF%A2/" class="archive-article-date">
         <time datetime="2020-02-17T02:27:55.368Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-17</time>
 </a>
 
@@ -299,7 +299,7 @@
     <h2 id="简单查询"><a href="#简单查询" class="headerlink" title="简单查询"></a>简单查询</h2><p>语法句式如下：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SELECT filed1,filed2 ... filedn </span><br><span class="line">    FROM tablename</span><br><span class="line">    [WHERE CONDITION11]</span><br><span class="line">    [GROUP BY filedm [HAVING CONDITION2]]</span><br><span class="line">    [ORDER BY filedn [ASC|DESC]]</span><br></pre></td></tr></table></figure>
     
-    <a class="article-more-a" href="/2020/02/17/MySQL%E6%95%B0%E6%8D%AE%E6%9F%A5%E8%AF%A2/#more">more >></a>
+    <a class="article-more-a" href="/2020/02/17/Mysql/MySQL%E6%95%B0%E6%8D%AE%E6%9F%A5%E8%AF%A2/#more">more >></a>
     
     
 
@@ -315,7 +315,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/2020/02/17/MySQL%E6%95%B0%E6%8D%AE%E6%9F%A5%E8%AF%A2/">展开全文 >></a>
+      <a class="article-more-a" href="/2020/02/17/Mysql/MySQL%E6%95%B0%E6%8D%AE%E6%9F%A5%E8%AF%A2/">展开全文 >></a>
     </p>
     
 
@@ -345,7 +345,7 @@
 
 
   
-    <article id="post-MySql表相关操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Mysql/MySql表相关操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -353,7 +353,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2020/02/16/MySql%E8%A1%A8%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" target="_blank">MySQL TABLE</a>
+	  <a class="article-title" href="/2020/02/16/Mysql/MySql%E8%A1%A8%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" target="_blank">MySQL TABLE</a>
   
     </h1>
   
@@ -361,7 +361,7 @@
 
   
   
-<a href="/2020/02/16/MySql%E8%A1%A8%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" class="archive-article-date">
+<a href="/2020/02/16/Mysql/MySql%E8%A1%A8%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" class="archive-article-date">
         <time datetime="2020-02-16T09:47:01.192Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-16</time>
 </a>
 
@@ -377,7 +377,7 @@
     <h2 id="数据库中的数据类型"><a href="#数据库中的数据类型" class="headerlink" title="数据库中的数据类型"></a>数据库中的数据类型</h2><hr>
 <h3 id="可通过-help-data-types-查询所有支持的数据类型"><a href="#可通过-help-data-types-查询所有支持的数据类型" class="headerlink" title="可通过 help data types; 查询所有支持的数据类型"></a>可通过 help data types; 查询所有支持的数据类型</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; help data types;</span><br></pre></td></tr></table></figure>
     
-    <a class="article-more-a" href="/2020/02/16/MySql%E8%A1%A8%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/#more">more >></a>
+    <a class="article-more-a" href="/2020/02/16/Mysql/MySql%E8%A1%A8%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/#more">more >></a>
     
     
 
@@ -393,7 +393,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/2020/02/16/MySql%E8%A1%A8%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/">展开全文 >></a>
+      <a class="article-more-a" href="/2020/02/16/Mysql/MySql%E8%A1%A8%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/">展开全文 >></a>
     </p>
     
 
@@ -423,7 +423,7 @@
 
 
   
-    <article id="post-Mysql数据库相关操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-Mysql/Mysql数据库相关操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
@@ -431,7 +431,7 @@
   
     <h1 itemprop="name">
 	
-	  <a class="article-title" href="/2020/02/16/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" target="_blank">MySQL DATABASE</a>
+	  <a class="article-title" href="/2020/02/16/Mysql/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" target="_blank">MySQL DATABASE</a>
   
     </h1>
   
@@ -439,7 +439,7 @@
 
   
   
-<a href="/2020/02/16/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" class="archive-article-date">
+<a href="/2020/02/16/Mysql/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" class="archive-article-date">
         <time datetime="2020-02-16T09:47:01.192Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-16</time>
 </a>
 
@@ -454,7 +454,7 @@
     
     <h1 id="MySql-数据库操作"><a href="#MySql-数据库操作" class="headerlink" title="MySql 数据库操作"></a>MySql 数据库操作</h1><h2 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">database</span> database_name;</span><br></pre></td></tr></table></figure>
     
-    <a class="article-more-a" href="/2020/02/16/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/#more">more >></a>
+    <a class="article-more-a" href="/2020/02/16/Mysql/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/#more">more >></a>
     
     
 
@@ -470,7 +470,7 @@
 
     
     <p class="article-more-link">
-      <a class="article-more-a" href="/2020/02/16/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/">展开全文 >></a>
+      <a class="article-more-a" href="/2020/02/16/Mysql/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/">展开全文 >></a>
     </p>
     
 
