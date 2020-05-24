@@ -17,13 +17,13 @@
 <meta property="og:site_name" content="iforeverhz">
 <meta property="og:description" content="简单查询语法句式如下： 12345SELECT filed1,filed2 ... filedn     FROM tablename    [WHERE CONDITION11]    [GROUP BY filedm [HAVING CONDITION2]]    [ORDER BY filedn [ASC|DESC]]">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://raw.githubusercontent.com/iforeverhz/cloudimg/master/images20200524191244.png">
-<meta property="og:image" content="https://raw.githubusercontent.com/iforeverhz/cloudimg/master/images20200524192117.png">
+<meta property="og:image" content="https://img2020.cnblogs.com/blog/1633911/202005/1633911-20200524202210586-1648962922.png">
+<meta property="og:image" content="https://img2020.cnblogs.com/blog/1633911/202005/1633911-20200524202209737-665731426.png">
 <meta property="article:published_time" content="2020-02-17T02:27:55.368Z">
-<meta property="article:modified_time" content="2020-05-24T11:24:13.552Z">
+<meta property="article:modified_time" content="2020-05-24T12:23:33.347Z">
 <meta property="article:author" content="Coderyy">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://raw.githubusercontent.com/iforeverhz/cloudimg/master/images20200524191244.png">
+<meta name="twitter:image" content="https://img2020.cnblogs.com/blog/1633911/202005/1633911-20200524202210586-1648962922.png">
   
     <link rel="alternative" href="/atom.xml" title="iforeverhz" type="application/atom+xml">
   
@@ -284,11 +284,14 @@
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; insert into t_stu values("小花",'woman',25);</span><br><span class="line">ERROR 1366 (HY000): Incorrect string value: '\xE5\xB0\x8F\xE8\x8A\xB1' for column 'name' at row 1</span><br></pre></td></tr></table></figure>
 <p>插入数据失败 查看建表信息</p>
 <!-- ![](../image/selct1.jpg) -->
-<p><img src="https://raw.githubusercontent.com/iforeverhz/cloudimg/master/images20200524191244.png" alt="20200524191244"></p>
+<!-- ![20200524191244](https://raw.githubusercontent.com/iforeverhz/cloudimg/master/images20200524191244.png) -->
+
+<p><img src="https://img2020.cnblogs.com/blog/1633911/202005/1633911-20200524202210586-1648962922.png" alt="image-20200524201939828"></p>
 <p>解决连接<a href="https://blog.csdn.net/ch717828/article/details/41357431" target="_blank" rel="noopener">CSDN</a></p>
 <!-- ![](../image/select2.jpg) -->
+<p><img src="https://img2020.cnblogs.com/blog/1633911/202005/1633911-20200524202209737-665731426.png" alt="image-20200524202008203"></p>
+<!-- ![20200524192117](https://raw.githubusercontent.com/iforeverhz/cloudimg/master/images20200524192117.png) -->
 
-<p><img src="https://raw.githubusercontent.com/iforeverhz/cloudimg/master/images20200524192117.png" alt="20200524192117"></p>
 <h3 id="LIKE-模糊查询"><a href="#LIKE-模糊查询" class="headerlink" title="LIKE 模糊查询"></a>LIKE 模糊查询</h3><p>语法句式如下：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> filed1,filed2,...,filedn</span><br><span class="line"><span class="keyword">FROM</span> tablename <span class="keyword">WHERE</span> filedm <span class="keyword">LIKE</span> <span class="keyword">value</span>;</span><br></pre></td></tr></table></figure>
 <p><strong>LIKE</strong>关键字支持的通配符</p>
