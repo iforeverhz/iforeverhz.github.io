@@ -6,21 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/iforeverhz">
-  <title>iforeverhz</title>
+  <title>git/阿里云CentOs7.5 git安装 | iforeverhz</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-    
-    <!-- <meta name="keywords" content="">
-    <meta name="description" content=""> -->
-  
-  <meta property="og:type" content="website">
-<meta property="og:title" content="iforeverhz">
-<meta property="og:url" content="https://github.com/iforeverhz/index.html">
+  <meta name="description" content="原文参考 linux可以通过yum install git 来进行快捷安装，但是只能安装1.7版本，不能满足github和一些git网站的需求，所以需要下载更高版本，而更高版本只提供了源码，所以下载下来要先进行编译才能使用。  准备工作  安装依赖包">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git&#x2F;阿里云CentOs7.5 git安装">
+<meta property="og:url" content="https://github.com/iforeverhz/2020/05/24/git/%E9%98%BF%E9%87%8C%E4%BA%91CentOs7.5%20git%E5%AE%89%E8%A3%85/index.html">
 <meta property="og:site_name" content="iforeverhz">
+<meta property="og:description" content="原文参考 linux可以通过yum install git 来进行快捷安装，但是只能安装1.7版本，不能满足github和一些git网站的需求，所以需要下载更高版本，而更高版本只提供了源码，所以下载下来要先进行编译才能使用。  准备工作  安装依赖包">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://iforeverhz-1302227780.cos.ap-shenzhen-fsi.myqcloud.com/markdown/img/20200524115256.png">
+<meta property="article:published_time" content="2020-05-24T02:50:08.392Z">
+<meta property="article:modified_time" content="2020-05-24T04:11:51.667Z">
 <meta property="article:author" content="Coderyy">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://iforeverhz-1302227780.cos.ap-shenzhen-fsi.myqcloud.com/markdown/img/20200524115256.png">
   
     <link rel="alternative" href="/atom.xml" title="iforeverhz" type="application/atom+xml">
   
@@ -187,103 +189,25 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-
-  
-    <article id="post-git/git 查看用户名&amp;邮箱信息" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-git/阿里云CentOs7.5 git安装" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/05/24/git/git%20%E6%9F%A5%E7%9C%8B%E7%94%A8%E6%88%B7%E5%90%8D&%E9%82%AE%E7%AE%B1%E4%BF%A1%E6%81%AF/" target="_blank">git/git 查看用户名&amp;邮箱信息</a>
-  
+    <h1 class="article-title" itemprop="name">
+      git/阿里云CentOs7.5 git安装
     </h1>
   
 
 
   
   
-<a href="/2020/05/24/git/git%20%E6%9F%A5%E7%9C%8B%E7%94%A8%E6%88%B7%E5%90%8D&%E9%82%AE%E7%AE%B1%E4%BF%A1%E6%81%AF/" class="archive-article-date">
-        <time datetime="2020-05-24T05:47:01.669Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-24</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <ol>
-<li>查看用户名<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config user.name</span><br></pre></td></tr></table></figure>
-    
-    <a class="article-more-a" href="/2020/05/24/git/git%20%E6%9F%A5%E7%9C%8B%E7%94%A8%E6%88%B7%E5%90%8D&%E9%82%AE%E7%AE%B1%E4%BF%A1%E6%81%AF/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/05/24/git/git%20%E6%9F%A5%E7%9C%8B%E7%94%A8%E6%88%B7%E5%90%8D&%E9%82%AE%E7%AE%B1%E4%BF%A1%E6%81%AF/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
         
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
 
-
-
-
-  
-    <article id="post-git/阿里云CentOs7.5 git安装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/05/24/git/%E9%98%BF%E9%87%8C%E4%BA%91CentOs7.5%20git%E5%AE%89%E8%A3%85/" target="_blank">git/阿里云CentOs7.5 git安装</a>
-  
-    </h1>
-  
-
-
-  
-  
 <a href="/2020/05/24/git/%E9%98%BF%E9%87%8C%E4%BA%91CentOs7.5%20git%E5%AE%89%E8%A3%85/" class="archive-article-date">
         <time datetime="2020-05-24T02:50:08.392Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-24</time>
 </a>
@@ -291,6 +215,27 @@
   
   
     
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">258字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">1分</span>
+    </span>
+  </span>
+</div>
+
 
   
   </header>
@@ -302,13 +247,90 @@
 <ol>
 <li>准备工作  安装依赖包</li>
 </ol>
-    
-    <a class="article-more-a" href="/2020/05/24/git/%E9%98%BF%E9%87%8C%E4%BA%91CentOs7.5%20git%E5%AE%89%E8%A3%85/#more">more >></a>
-    
+<a id="more"></a>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">yum install zlib-devel</span><br><span class="line">yum install openssl-devel</span><br><span class="line">yum install perl</span><br><span class="line">yum install cpio</span><br><span class="line">yum install expat-devel</span><br><span class="line">yum install gettext-devel</span><br><span class="line">yum install autoconf</span><br><span class="line">yum install perl-ExtUtils-MakeMaker package</span><br></pre></td></tr></table></figure>
+
+<ol start="2">
+<li>下载git源码</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget https://www.kernel.org/pub/software/scm/git/git-2.8.3.tar.gz</span><br></pre></td></tr></table></figure>
+<ul>
+<li>解压git安装包<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">tar -zxvf git-2.8.3.tar.gz</span><br><span class="line">cd git-2.8.3</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<ol start="3">
+<li>编译安装git，将其安装在/usr/local/git/目录下</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">make prefix=/usr/local/git all</span><br><span class="line">make prefix=/usr/local/git install</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>如果出现这样的错误信息<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http.h:6:23: fatal error: curl/curl.h: No such file or directory</span><br></pre></td></tr></table></figure>
+解决方法：<a href="https://stackoom.com/question/3Op79/http-h-%E8%87%B4%E5%91%BD%E9%94%99%E8%AF%AF-curl-curl-h-%E6%B2%A1%E6%9C%89%E6%AD%A4%E6%96%87%E4%BB%B6-%E7%9B%AE%E5%BD%95" target="_blank" rel="noopener">点击</a></li>
+</ul>
+<p>没有安装 curl<br>使用yum命令安装</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yum install curl-devel -y</span><br></pre></td></tr></table></figure>
+<p>返回第三步 重新编译安装</p>
+<ol start="4">
+<li>配置环境变量</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc/profile</span><br></pre></td></tr></table></figure>
+<p><img src="https://iforeverhz-1302227780.cos.ap-shenzhen-fsi.myqcloud.com/markdown/img/20200524115256.png" alt="20200524115256"></p>
+<ol start="5">
+<li>查看git是否安装完成</li>
+</ol>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">git  --version</span><br><span class="line"></span><br><span class="line">git version 1.8.3.1</span><br></pre></td></tr></table></figure>
     
 
     
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
 
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          Coderyy
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https:/github.com/iforeverhz/2020/05/24/git/阿里云CentOs7.5 git安装/" title="git/阿里云CentOs7.5 git安装" target="_blank">https:/github.com/iforeverhz/2020/05/24/git/阿里云CentOs7.5 git安装/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
     
 
   </div>
@@ -318,16 +340,85 @@
     
 
     
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/05/24/git/%E9%98%BF%E9%87%8C%E4%BA%91CentOs7.5%20git%E5%AE%89%E8%A3%85/">展开全文 >></a>
-    </p>
+
     
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://github.com/iforeverhz/2020/05/24/git/%E9%98%BF%E9%87%8C%E4%BA%91CentOs7.5%20git%E5%AE%89%E8%A3%85/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
 
     
     <div class="clearfix"></div>
   </div>
   </div>
 </article>
+
+
+<nav id="article-nav">
+  
+    <a href="/2020/05/24/git/git%20%E6%9F%A5%E7%9C%8B%E7%94%A8%E6%88%B7%E5%90%8D&%E9%82%AE%E7%AE%B1%E4%BF%A1%E6%81%AF/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          git/git 查看用户名&amp;邮箱信息
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/03/19/Mysql/mysql%E8%BF%9E%E6%8E%A5%E5%A4%B1%E8%B4%A5%E5%8E%9F%E5%9B%A0/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Mysql/mysql连接失败原因</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -348,318 +439,14 @@
 
 
 
-  
-    <article id="post-Mysql/mysql连接失败原因" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/03/19/Mysql/mysql%E8%BF%9E%E6%8E%A5%E5%A4%B1%E8%B4%A5%E5%8E%9F%E5%9B%A0/" target="_blank">Mysql/mysql连接失败原因</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/03/19/Mysql/mysql%E8%BF%9E%E6%8E%A5%E5%A4%B1%E8%B4%A5%E5%8E%9F%E5%9B%A0/" class="archive-article-date">
-        <time datetime="2020-03-19T07:58:35.978Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-19</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@************ /]# mysql -u root -p</span><br><span class="line">Enter password: </span><br><span class="line">ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)</span><br></pre></td></tr></table></figure>
-<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>重启mysql服务</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysql <span class="keyword">start</span></span><br></pre></td></tr></table></figure>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/03/19/Mysql/mysql%E8%BF%9E%E6%8E%A5%E5%A4%B1%E8%B4%A5%E5%8E%9F%E5%9B%A0/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
 
 
 
 
-  
-    <article id="post-Mysql/MySQL数据查询" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/02/17/Mysql/MySQL%E6%95%B0%E6%8D%AE%E6%9F%A5%E8%AF%A2/" target="_blank">Mysql/MySQL数据查询</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/02/17/Mysql/MySQL%E6%95%B0%E6%8D%AE%E6%9F%A5%E8%AF%A2/" class="archive-article-date">
-        <time datetime="2020-02-17T02:27:55.368Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-17</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="简单查询"><a href="#简单查询" class="headerlink" title="简单查询"></a>简单查询</h2><p>语法句式如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SELECT filed1,filed2 ... filedn </span><br><span class="line">    FROM tablename</span><br><span class="line">    [WHERE CONDITION11]</span><br><span class="line">    [GROUP BY filedm [HAVING CONDITION2]]</span><br><span class="line">    [ORDER BY filedn [ASC|DESC]]</span><br></pre></td></tr></table></figure>
-    
-    <a class="article-more-a" href="/2020/02/17/Mysql/MySQL%E6%95%B0%E6%8D%AE%E6%9F%A5%E8%AF%A2/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/02/17/Mysql/MySQL%E6%95%B0%E6%8D%AE%E6%9F%A5%E8%AF%A2/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
 
 
 
 
-  
-    <article id="post-Mysql/MySql表相关操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/02/16/Mysql/MySql%E8%A1%A8%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" target="_blank">MySQL TABLE</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/02/16/Mysql/MySql%E8%A1%A8%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" class="archive-article-date">
-        <time datetime="2020-02-16T09:47:01.192Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-16</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="数据库中的数据类型"><a href="#数据库中的数据类型" class="headerlink" title="数据库中的数据类型"></a>数据库中的数据类型</h2><hr>
-<h3 id="可通过-help-data-types-查询所有支持的数据类型"><a href="#可通过-help-data-types-查询所有支持的数据类型" class="headerlink" title="可通过 help data types; 查询所有支持的数据类型"></a>可通过 help data types; 查询所有支持的数据类型</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; help data types;</span><br></pre></td></tr></table></figure>
-    
-    <a class="article-more-a" href="/2020/02/16/Mysql/MySql%E8%A1%A8%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/02/16/Mysql/MySql%E8%A1%A8%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Mysql/Mysql数据库相关操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/02/16/Mysql/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" target="_blank">MySQL DATABASE</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/02/16/Mysql/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" class="archive-article-date">
-        <time datetime="2020-02-16T09:47:01.192Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-16</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="MySql-数据库操作"><a href="#MySql-数据库操作" class="headerlink" title="MySql 数据库操作"></a>MySql 数据库操作</h1><h2 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">database</span> database_name;</span><br></pre></td></tr></table></figure>
-    
-    <a class="article-more-a" href="/2020/02/16/Mysql/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/02/16/Mysql/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
 
 
           </div>
@@ -699,8 +486,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
