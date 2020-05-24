@@ -6,24 +6,24 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/iforeverhz">
-  <title>Mysql/MySQL数据查询 | iforeverhz</title>
+  <title>MySQL数据查询 | iforeverhz</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
   <meta name="description" content="简单查询语法句式如下： 12345SELECT filed1,filed2 ... filedn     FROM tablename    [WHERE CONDITION11]    [GROUP BY filedm [HAVING CONDITION2]]    [ORDER BY filedn [ASC|DESC]]">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Mysql&#x2F;MySQL数据查询">
-<meta property="og:url" content="https://github.com/iforeverhz/2020/02/17/Mysql/MySQL%E6%95%B0%E6%8D%AE%E6%9F%A5%E8%AF%A2/index.html">
+<meta property="og:title" content="MySQL数据查询">
+<meta property="og:url" content="https://github.com/iforeverhz/2020/02/17/MySQL%E6%95%B0%E6%8D%AE%E6%9F%A5%E8%AF%A2/index.html">
 <meta property="og:site_name" content="iforeverhz">
 <meta property="og:description" content="简单查询语法句式如下： 12345SELECT filed1,filed2 ... filedn     FROM tablename    [WHERE CONDITION11]    [GROUP BY filedm [HAVING CONDITION2]]    [ORDER BY filedn [ASC|DESC]]">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://github.com/iforeverhz/2020/02/17/Mysql/image/selct1.jpg">
-<meta property="og:image" content="https://github.com/iforeverhz/2020/02/17/Mysql/image/select2.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/iforeverhz/cloudimg/master/images20200524191244.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/iforeverhz/cloudimg/master/images20200524192117.png">
 <meta property="article:published_time" content="2020-02-17T02:27:55.368Z">
-<meta property="article:modified_time" content="2020-05-23T12:34:15.980Z">
+<meta property="article:modified_time" content="2020-05-24T11:24:13.552Z">
 <meta property="article:author" content="Coderyy">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://github.com/iforeverhz/2020/02/17/Mysql/image/selct1.jpg">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/iforeverhz/cloudimg/master/images20200524191244.png">
   
     <link rel="alternative" href="/atom.xml" title="iforeverhz" type="application/atom+xml">
   
@@ -190,14 +190,14 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Mysql/MySQL数据查询" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-MySQL数据查询" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
     <h1 class="article-title" itemprop="name">
-      Mysql/MySQL数据查询
+      MySQL数据查询
     </h1>
   
 
@@ -209,7 +209,7 @@
               <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
         </span>
 
-<a href="/2020/02/17/Mysql/MySQL%E6%95%B0%E6%8D%AE%E6%9F%A5%E8%AF%A2/" class="archive-article-date">
+<a href="/2020/02/17/MySQL%E6%95%B0%E6%8D%AE%E6%9F%A5%E8%AF%A2/" class="archive-article-date">
         <time datetime="2020-02-17T02:27:55.368Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-17</time>
 </a>
 
@@ -283,9 +283,12 @@
 <p>一点小问题:关于字符编码</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; insert into t_stu values("小花",'woman',25);</span><br><span class="line">ERROR 1366 (HY000): Incorrect string value: '\xE5\xB0\x8F\xE8\x8A\xB1' for column 'name' at row 1</span><br></pre></td></tr></table></figure>
 <p>插入数据失败 查看建表信息</p>
-<p><img src="../image/selct1.jpg" alt=""></p>
+<!-- ![](../image/selct1.jpg) -->
+<p><img src="https://raw.githubusercontent.com/iforeverhz/cloudimg/master/images20200524191244.png" alt="20200524191244"></p>
 <p>解决连接<a href="https://blog.csdn.net/ch717828/article/details/41357431" target="_blank" rel="noopener">CSDN</a></p>
-<p><img src="../image/select2.jpg" alt=""></p>
+<!-- ![](../image/select2.jpg) -->
+
+<p><img src="https://raw.githubusercontent.com/iforeverhz/cloudimg/master/images20200524192117.png" alt="20200524192117"></p>
 <h3 id="LIKE-模糊查询"><a href="#LIKE-模糊查询" class="headerlink" title="LIKE 模糊查询"></a>LIKE 模糊查询</h3><p>语法句式如下：</p>
 <figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> filed1,filed2,...,filedn</span><br><span class="line"><span class="keyword">FROM</span> tablename <span class="keyword">WHERE</span> filedm <span class="keyword">LIKE</span> <span class="keyword">value</span>;</span><br></pre></td></tr></table></figure>
 <p><strong>LIKE</strong>关键字支持的通配符</p>
@@ -364,7 +367,7 @@
         </li>
         <li>
           <strong>本文链接：</strong>
-          <a href="https:/github.com/iforeverhz/2020/02/17/Mysql/MySQL数据查询/" title="Mysql/MySQL数据查询" target="_blank">https:/github.com/iforeverhz/2020/02/17/Mysql/MySQL数据查询/</a>
+          <a href="https:/github.com/iforeverhz/2020/02/17/MySQL数据查询/" title="MySQL数据查询" target="_blank">https:/github.com/iforeverhz/2020/02/17/MySQL数据查询/</a>
         </li>
         
         <li>
@@ -431,7 +434,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://github.com/iforeverhz/2020/02/17/Mysql/MySQL%E6%95%B0%E6%8D%AE%E6%9F%A5%E8%AF%A2/" alt="微信分享二维码"> -->
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://github.com/iforeverhz/2020/02/17/MySQL%E6%95%B0%E6%8D%AE%E6%9F%A5%E8%AF%A2/" alt="微信分享二维码"> -->
     </div>
 </div>
 
@@ -446,17 +449,17 @@
 
 <nav id="article-nav">
   
-    <a href="/2020/03/19/Mysql/mysql%E8%BF%9E%E6%8E%A5%E5%A4%B1%E8%B4%A5%E5%8E%9F%E5%9B%A0/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/03/19/mysql%E8%BF%9E%E6%8E%A5%E5%A4%B1%E8%B4%A5%E5%8E%9F%E5%9B%A0/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          Mysql/mysql连接失败原因
+          mysql连接失败原因
         
       </div>
     </a>
   
   
-    <a href="/2020/02/16/Mysql/MySql%E8%A1%A8%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/02/16/MySql%E8%A1%A8%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">MySQL TABLE</div>
       <i class="icon-circle-right"></i>
     </a>
