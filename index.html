@@ -225,31 +225,9 @@
 <li>List<User> select(User record)</li>
 </ul>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">User user = <span class="keyword">new</span> User();</span><br><span class="line"><span class="comment">//条件</span></span><br><span class="line">user.setName(<span class="string">"hky"</span>);</span><br><span class="line">user.setAge(<span class="number">22</span>);</span><br><span class="line"><span class="comment">//查询（参数是一个对象类型）</span></span><br><span class="line">List&lt;User&gt; users = userMapper.select(user);</span><br><span class="line"><span class="keyword">for</span> (User user1 : users) &#123;</span><br><span class="line">    System.out.println(user1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>selectByPrimaryKey(Object key) </li>
-</ul>
-<p>根据主键字段进行查询，方法参数必须包含完整的主键属性，查询条件使用等号</p>
-</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>. 直接给主键查询</span><br><span class="line">User user2 = userMapper.selectByPrimaryKey(id);</span><br><span class="line"><span class="comment">//User(id=4, name=jim, age=55)</span></span><br><span class="line"><span class="number">2</span>. 结合其他条件</span><br><span class="line">User user = <span class="keyword">new</span> User();</span><br><span class="line"><span class="comment">//条件</span></span><br><span class="line">user.setName(<span class="string">"hky"</span>);</span><br><span class="line">user.setAge(<span class="number">22</span>);</span><br><span class="line">User user2 = userMapper.selectByPrimaryKey(user);<span class="comment">//null  相当于多条件查询</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>selectOne（）</li>
-</ul>
-<p>根据实体中的属性进行查询，只能有一个返回值，有多个结果是抛出异常，查询条件使用等号</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"> 1. 给出所有条件  </span><br><span class="line">User user &#x3D; new User();</span><br><span class="line">&#x2F;&#x2F;条件</span><br><span class="line">user.setId(6);</span><br><span class="line">user.setName(&quot;hky&quot;);</span><br><span class="line">user.setAge(22);</span><br><span class="line">User user1 &#x3D; userMapper.selectOne(user);</span><br><span class="line">&#x2F;&#x2F;User(id&#x3D;6, name&#x3D;hky, age&#x3D;22)</span><br><span class="line">2. 数据库中存在相同的name</span><br><span class="line">User user &#x3D; new User();</span><br><span class="line">&#x2F;&#x2F;条件</span><br><span class="line">user.setName(&quot;tom&quot;);</span><br><span class="line">User user1 &#x3D; userMapper.selectOne(user);</span><br><span class="line">&#x2F;&#x2F;抛出异常如下：找到两个符合条件的结果</span><br><span class="line">Expected one result (or null) to be returned by selectOne(), but found: 2</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>selectAll() 查询所有数据 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">List&lt;User&gt; users &#x3D; userMapper.selectAll();</span><br><span class="line">for (User user1 : users) &#123;</span><br><span class="line">    System.out.println(user1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>selectByExample() &amp; selectOneByExample()</p>
-<p>根据Example条件进行查询 前者返回时list 后者返回一个结果（如果返回结果超过一个则抛出异常）如：</p>
-<p>Expected one result (or null) to be returned by selectOne(), but found: 2</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Example example &#x3D; new Example(User.class);</span><br><span class="line">example.createCriteria().andEqualTo(&quot;name&quot;,&quot;hky&quot;).andEqualTo(&quot;age&quot;,22); &#x2F;&#x2F;还可以继续添加条件</span><br><span class="line">&#x2F;&#x2F; 如果需要排序 注：中间用空格分开</span><br><span class="line">example.setOrderByClause(&quot;age&quot;);&#x2F;&#x2F;默认升序</span><br><span class="line"> example.setOrderByClause(&quot;age asc&quot;);&#x2F;&#x2F;升序</span><br><span class="line">example.setOrderByClause(&quot;age desc&quot;);&#x2F;&#x2F;降序</span><br><span class="line">List&lt;User&gt; users &#x3D; userMapper.selectByExample(example);</span><br><span class="line">for (User user1 : users) &#123;</span><br><span class="line">    System.out.println(user1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-</li>
-</ul>
-
+    
+    <a class="article-more-a" href="/2020/05/29/%E9%80%9A%E7%94%A8mapper%E5%B8%B8%E7%94%A8%E6%9F%A5%E8%AF%A2%E6%96%B9%E6%B3%95%E6%B5%8B%E8%AF%95/#more">more >></a>
+    
     
 
     
@@ -327,20 +305,9 @@
 <li>导入lombok依赖</li>
 </ol>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">   &lt;groupId&gt;org.projectlombok&lt;/groupId&gt;</span><br><span class="line">   &lt;artifactId&gt;lombok&lt;/artifactId&gt;</span><br><span class="line">   &lt;version&gt;1.18.12&lt;/version&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
-<ol start="2">
-<li><p>mapper接口继承Mapper（泛型）</p>
-<p>继承的方法实现的大部分的数据库操作，不需要自己编写</p>
-<p>如果涉及多表查询则需要自己实现</p>
-<p> 如：</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">UserMapper</span> <span class="keyword">extends</span> <span class="title">Mapper</span>&lt;<span class="title">User</span>&gt;</span></span><br></pre></td></tr></table></figure></li>
-<li><p>实体类的简化</p>
-<p>lombok简化了get&amp;set&amp;tostring等方法</p>
-<p>使用时需要添加下面的注解</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Data</span></span><br><span class="line"><span class="meta">@AllArgsConstructor</span> <span class="comment">//全参构造 需要时添加</span></span><br><span class="line"><span class="meta">@NoArgsConstructor</span> <span class="comment">//空参构造 需要时添加</span></span><br><span class="line"><span class="meta">@Table</span>(name = <span class="string">" user"</span>) <span class="comment">//name属性对应的数据库的表名</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@Id</span> <span class="comment">//主键</span></span><br><span class="line"><span class="comment">/* 主键生成策略 有四种 */</span></span><br><span class="line"><span class="meta">@GeneratedValue</span>(strategy = GenerationType.IDENTITY) <span class="comment">/* 一般不需要参数 但是如果主键自增长 auto_increment 不加报错*/</span></span><br><span class="line"><span class="comment">//@GeneratedValue(strategy = GenerationType.AUTO)</span></span><br><span class="line"><span class="comment">//@GeneratedValue(strategy = GenerationType.SEQUENCE)</span></span><br><span class="line"><span class="comment">//@GeneratedValue(strategy = GenerationType.TABLE)</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//@Column(name = "name")  /*属性名与数据库属性不一致的情况下*/</span></span><br><span class="line"><span class="comment">// 属性参数为相应的对象类型</span></span><br><span class="line"><span class="keyword">private</span> Integer id;</span><br><span class="line"><span class="keyword">private</span> String name;</span><br><span class="line"><span class="keyword">private</span> Integer age;</span><br></pre></td></tr></table></figure>
-<p>到这里 配置基本结束 </p>
-</li>
-</ol>
-
+    
+    <a class="article-more-a" href="/2020/05/29/%E9%80%9A%E7%94%A8Mmapper/#more">more >></a>
+    
     
 
     
