@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://github.com/iforeverhz">
-  <title>iforeverhz</title>
+  <title>通用Mmapper | iforeverhz</title>
   <meta name="generator" content="hexo-theme-yilia-plus">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
-    
-    <!-- <meta name="keywords" content="">
-    <meta name="description" content=""> -->
-  
-  <meta property="og:type" content="website">
-<meta property="og:title" content="iforeverhz">
-<meta property="og:url" content="https://github.com/iforeverhz/index.html">
+  <meta name="description" content="导入lombok依赖  12345&lt;dependency&gt;   &lt;groupId&gt;org.projectlombok&lt;&#x2F;groupId&gt;   &lt;artifactId&gt;lombok&lt;&#x2F;artifactId&gt;   &lt;version&gt;1.18.12&lt;&#x2F;version&gt;&lt;&#x2F;dependency&gt;  mappe">
+<meta property="og:type" content="article">
+<meta property="og:title" content="通用Mmapper">
+<meta property="og:url" content="https://github.com/iforeverhz/2020/05/29/%E9%80%9A%E7%94%A8Mmapper/index.html">
 <meta property="og:site_name" content="iforeverhz">
+<meta property="og:description" content="导入lombok依赖  12345&lt;dependency&gt;   &lt;groupId&gt;org.projectlombok&lt;&#x2F;groupId&gt;   &lt;artifactId&gt;lombok&lt;&#x2F;artifactId&gt;   &lt;version&gt;1.18.12&lt;&#x2F;version&gt;&lt;&#x2F;dependency&gt;  mappe">
 <meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-05-29T01:17:30.480Z">
+<meta property="article:modified_time" content="2020-05-29T07:38:22.273Z">
 <meta property="article:author" content="Coderyy">
 <meta name="twitter:card" content="summary">
   
@@ -187,129 +187,25 @@
               class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-
-  
-    <article id="post-通用mapper常用查询方法测试" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-通用Mmapper" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
   
   
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/05/29/%E9%80%9A%E7%94%A8mapper%E5%B8%B8%E7%94%A8%E6%9F%A5%E8%AF%A2%E6%96%B9%E6%B3%95%E6%B5%8B%E8%AF%95/" target="_blank">通用mapper常用查询方法测试</a>
-  
+    <h1 class="article-title" itemprop="name">
+      通用Mmapper
     </h1>
   
 
 
   
   
-<a href="/2020/05/29/%E9%80%9A%E7%94%A8mapper%E5%B8%B8%E7%94%A8%E6%9F%A5%E8%AF%A2%E6%96%B9%E6%B3%95%E6%B5%8B%E8%AF%95/" class="archive-article-date">
-        <time datetime="2020-05-29T01:57:42.888Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-29</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <ol>
-<li><p>查询</p>
-<ul>
-<li>List<User> select(User record)</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">User user = <span class="keyword">new</span> User();</span><br><span class="line"><span class="comment">//条件</span></span><br><span class="line">user.setName(<span class="string">"hky"</span>);</span><br><span class="line">user.setAge(<span class="number">22</span>);</span><br><span class="line"><span class="comment">//查询（参数是一个对象类型）</span></span><br><span class="line">List&lt;User&gt; users = userMapper.select(user);</span><br><span class="line"><span class="keyword">for</span> (User user1 : users) &#123;</span><br><span class="line">    System.out.println(user1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>selectByPrimaryKey(Object key) </li>
-</ul>
-<p>根据主键字段进行查询，方法参数必须包含完整的主键属性，查询条件使用等号</p>
-</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>. 直接给主键查询</span><br><span class="line">User user2 = userMapper.selectByPrimaryKey(id);</span><br><span class="line"><span class="comment">//User(id=4, name=jim, age=55)</span></span><br><span class="line"><span class="number">2</span>. 结合其他条件</span><br><span class="line">User user = <span class="keyword">new</span> User();</span><br><span class="line"><span class="comment">//条件</span></span><br><span class="line">user.setName(<span class="string">"hky"</span>);</span><br><span class="line">user.setAge(<span class="number">22</span>);</span><br><span class="line">User user2 = userMapper.selectByPrimaryKey(user);<span class="comment">//null  相当于多条件查询</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>selectOne（）</li>
-</ul>
-<p>根据实体中的属性进行查询，只能有一个返回值，有多个结果是抛出异常，查询条件使用等号</p>
- <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"> 1. 给出所有条件  </span><br><span class="line">User user &#x3D; new User();</span><br><span class="line">&#x2F;&#x2F;条件</span><br><span class="line">user.setId(6);</span><br><span class="line">user.setName(&quot;hky&quot;);</span><br><span class="line">user.setAge(22);</span><br><span class="line">User user1 &#x3D; userMapper.selectOne(user);</span><br><span class="line">&#x2F;&#x2F;User(id&#x3D;6, name&#x3D;hky, age&#x3D;22)</span><br><span class="line">2. 数据库中存在相同的name</span><br><span class="line">User user &#x3D; new User();</span><br><span class="line">&#x2F;&#x2F;条件</span><br><span class="line">user.setName(&quot;tom&quot;);</span><br><span class="line">User user1 &#x3D; userMapper.selectOne(user);</span><br><span class="line">&#x2F;&#x2F;抛出异常如下：找到两个符合条件的结果</span><br><span class="line">Expected one result (or null) to be returned by selectOne(), but found: 2</span><br></pre></td></tr></table></figure>
-
-<ul>
-<li><p>selectAll() 查询所有数据 </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">List&lt;User&gt; users &#x3D; userMapper.selectAll();</span><br><span class="line">for (User user1 : users) &#123;</span><br><span class="line">    System.out.println(user1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li><p>selectByExample() &amp; selectOneByExample()</p>
-<p>根据Example条件进行查询 前者返回时list 后者返回一个结果（如果返回结果超过一个则抛出异常）如：</p>
-<p>Expected one result (or null) to be returned by selectOne(), but found: 2</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">Example example &#x3D; new Example(User.class);</span><br><span class="line">example.createCriteria().andEqualTo(&quot;name&quot;,&quot;hky&quot;).andEqualTo(&quot;age&quot;,22); &#x2F;&#x2F;还可以继续添加条件</span><br><span class="line">&#x2F;&#x2F; 如果需要排序 注：中间用空格分开</span><br><span class="line">example.setOrderByClause(&quot;age&quot;);&#x2F;&#x2F;默认升序</span><br><span class="line"> example.setOrderByClause(&quot;age asc&quot;);&#x2F;&#x2F;升序</span><br><span class="line">example.setOrderByClause(&quot;age desc&quot;);&#x2F;&#x2F;降序</span><br><span class="line">List&lt;User&gt; users &#x3D; userMapper.selectByExample(example);</span><br><span class="line">for (User user1 : users) &#123;</span><br><span class="line">    System.out.println(user1);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-</li>
-</ul>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/05/29/%E9%80%9A%E7%94%A8mapper%E5%B8%B8%E7%94%A8%E6%9F%A5%E8%AF%A2%E6%96%B9%E6%B3%95%E6%B5%8B%E8%AF%95/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
         
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
 
-
-
-
-  
-    <article id="post-通用Mmapper" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/05/29/%E9%80%9A%E7%94%A8Mmapper/" target="_blank">通用Mmapper</a>
-  
-    </h1>
-  
-
-
-  
-  
 <a href="/2020/05/29/%E9%80%9A%E7%94%A8Mmapper/" class="archive-article-date">
         <time datetime="2020-05-29T01:17:30.480Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-29</time>
 </a>
@@ -317,6 +213,27 @@
   
   
     
+<div style="margin-top:10px;">
+  <span class="post-time">
+    <span class="post-meta-item-icon">
+      <!-- fonts.scss -->
+      <!-- 百度字体平台:http://fontstore.baidu.com/static/editor/index.html -->
+      <i class="icon-statistics"></i>
+      <span class="post-meta-item-text"> 字数统计:</span>
+      <span class="post-count">255字</span>
+    </span>
+  </span>
+
+  <span class="post-time">
+    &nbsp; | &nbsp;
+    <span class="post-meta-item-icon">
+      <i class="icon-book icon"></i>
+      <span class="post-meta-item-text"> 阅读时长≈</span>
+      <span class="post-count">1分</span>
+    </span>
+  </span>
+</div>
+
 
   
   </header>
@@ -344,7 +261,54 @@
     
 
     
+    <div class="page-reward">
+      <a href="javascript:void(0);" class="page-reward-btn tooltip-top" target="_self">
+        <div class="tooltip tooltip-east">
+          <span class="tooltip-item">
+            赏
+          </span>
+          <span class="tooltip-content">
+            <span class="tooltip-text">
+              <span class="tooltip-inner">
+                <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i
+                    class="icon icon-quo-right"></i></p>
+                <div class="reward-box">
+                  
+                  <div class="reward-box-item">
+                    <img class="reward-img" src="/img/alipay.jpg">
+                    <span class="reward-type">支付宝</span>
+                  </div>
+                  
+                  
+                </div>
+              </span>
+            </span>
+          </span>
+        </div>
+      </a>
+    </div>
+    
 
+    
+    <div class="declare"> 
+      <ul class="post-copyright">
+        <li>
+          <strong>本文作者：</strong>
+          Coderyy
+        </li>
+        <li>
+          <strong>本文链接：</strong>
+          <a href="https:/github.com/iforeverhz/2020/05/29/通用Mmapper/" title="通用Mmapper" target="_blank">https:/github.com/iforeverhz/2020/05/29/通用Mmapper/</a>
+        </li>
+        
+        <li>
+          <strong>版权声明： </strong>
+          
+          本博客所有文章除特别声明外，均采用 <a href="https://github.com/JoeyBling/hexo-theme-yilia-plus/blob/master/LICENSE" rel="external nofollow" target="_blank">MIT</a> 许可协议。转载请注明出处！
+        </li>
+        
+      </ul>
+    </div>
     
 
   </div>
@@ -354,16 +318,85 @@
     
 
     
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/05/29/%E9%80%9A%E7%94%A8Mmapper/">展开全文 >></a>
-    </p>
+
     
+    
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <!-- <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a> -->
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+     <!-- <img src="//pan.baidu.com/share/qrcode?url=https://github.com/iforeverhz/2020/05/29/%E9%80%9A%E7%94%A8Mmapper/" alt="微信分享二维码"> -->
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
 
     
     <div class="clearfix"></div>
   </div>
   </div>
 </article>
+
+
+<nav id="article-nav">
+  
+    <a href="/2020/05/29/%E9%80%9A%E7%94%A8mapper%E5%B8%B8%E7%94%A8%E6%9F%A5%E8%AF%A2%E6%96%B9%E6%B3%95%E6%B5%8B%E8%AF%95/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          通用mapper常用查询方法测试
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/05/27/SpringBootDemo1/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">SpringBootDemo1</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -384,557 +417,14 @@
 
 
 
-  
-    <article id="post-SpringBootDemo1" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/05/27/SpringBootDemo1/" target="_blank">SpringBootDemo1</a>
-  
-    </h1>
-  
 
 
-  
-  
-<a href="/2020/05/27/SpringBootDemo1/" class="archive-article-date">
-        <time datetime="2020-05-27T11:46:20.192Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-27</time>
-</a>
 
-  
-  
-    
 
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h3 id="SpringBoot体验"><a href="#SpringBoot体验" class="headerlink" title="SpringBoot体验"></a>SpringBoot体验</h3><p>编程环境 idea(maven工程)</p>
-<p>全文附代码</p>
-<ol>
-<li><p>新建maven 工程</p>
-    
-    <a class="article-more-a" href="/2020/05/27/SpringBootDemo1/#more">more >></a>
-    
-    
 
-    
 
-    
 
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
 
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/05/27/SpringBootDemo1/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-git 查看用户名&amp;邮箱信息" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/05/24/git%20%E6%9F%A5%E7%9C%8B%E7%94%A8%E6%88%B7%E5%90%8D&%E9%82%AE%E7%AE%B1%E4%BF%A1%E6%81%AF/" target="_blank">git 查看用户名&amp;邮箱信息</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/05/24/git%20%E6%9F%A5%E7%9C%8B%E7%94%A8%E6%88%B7%E5%90%8D&%E9%82%AE%E7%AE%B1%E4%BF%A1%E6%81%AF/" class="archive-article-date">
-        <time datetime="2020-05-24T05:47:01.669Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-24</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <ol>
-<li>查看用户名<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git config user.name</span><br></pre></td></tr></table></figure>
-    
-    <a class="article-more-a" href="/2020/05/24/git%20%E6%9F%A5%E7%9C%8B%E7%94%A8%E6%88%B7%E5%90%8D&%E9%82%AE%E7%AE%B1%E4%BF%A1%E6%81%AF/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/05/24/git%20%E6%9F%A5%E7%9C%8B%E7%94%A8%E6%88%B7%E5%90%8D&%E9%82%AE%E7%AE%B1%E4%BF%A1%E6%81%AF/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-阿里云CentOs7.5 git安装" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/05/24/%E9%98%BF%E9%87%8C%E4%BA%91CentOs7.5%20git%E5%AE%89%E8%A3%85/" target="_blank">阿里云CentOs7.5 git安装</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/05/24/%E9%98%BF%E9%87%8C%E4%BA%91CentOs7.5%20git%E5%AE%89%E8%A3%85/" class="archive-article-date">
-        <time datetime="2020-05-24T02:50:08.392Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-05-24</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <p><a href="https://yq.aliyun.com/articles/637540" target="_blank" rel="noopener">原文参考</a></p>
-<p>linux可以通过yum install git 来进行快捷安装，但是只能安装1.7版本，不能满足github和一些git网站的需求，所以需要下载更高版本，而更高版本只提供了源码，所以下载下来要先进行编译才能使用。</p>
-<ol>
-<li>准备工作  安装依赖包</li>
-</ol>
-    
-    <a class="article-more-a" href="/2020/05/24/%E9%98%BF%E9%87%8C%E4%BA%91CentOs7.5%20git%E5%AE%89%E8%A3%85/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/05/24/%E9%98%BF%E9%87%8C%E4%BA%91CentOs7.5%20git%E5%AE%89%E8%A3%85/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-mysql连接失败原因" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/03/19/mysql%E8%BF%9E%E6%8E%A5%E5%A4%B1%E8%B4%A5%E5%8E%9F%E5%9B%A0/" target="_blank">mysql连接失败原因</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/03/19/mysql%E8%BF%9E%E6%8E%A5%E5%A4%B1%E8%B4%A5%E5%8E%9F%E5%9B%A0/" class="archive-article-date">
-        <time datetime="2020-03-19T07:58:35.978Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-19</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="问题描述"><a href="#问题描述" class="headerlink" title="问题描述"></a>问题描述</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@************ /]# mysql -u root -p</span><br><span class="line">Enter password: </span><br><span class="line">ERROR 2002 (HY000): Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)</span><br></pre></td></tr></table></figure>
-<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>重启mysql服务</p>
-<figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service mysql <span class="keyword">start</span></span><br></pre></td></tr></table></figure>
-
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/03/19/mysql%E8%BF%9E%E6%8E%A5%E5%A4%B1%E8%B4%A5%E5%8E%9F%E5%9B%A0/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-MySQL数据查询" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/02/17/MySQL%E6%95%B0%E6%8D%AE%E6%9F%A5%E8%AF%A2/" target="_blank">MySQL数据查询</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/02/17/MySQL%E6%95%B0%E6%8D%AE%E6%9F%A5%E8%AF%A2/" class="archive-article-date">
-        <time datetime="2020-02-17T02:27:55.368Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-17</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="简单查询"><a href="#简单查询" class="headerlink" title="简单查询"></a>简单查询</h2><p>语法句式如下：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">SELECT filed1,filed2 ... filedn </span><br><span class="line">    FROM tablename</span><br><span class="line">    [WHERE CONDITION11]</span><br><span class="line">    [GROUP BY filedm [HAVING CONDITION2]]</span><br><span class="line">    [ORDER BY filedn [ASC|DESC]]</span><br></pre></td></tr></table></figure>
-    
-    <a class="article-more-a" href="/2020/02/17/MySQL%E6%95%B0%E6%8D%AE%E6%9F%A5%E8%AF%A2/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/02/17/MySQL%E6%95%B0%E6%8D%AE%E6%9F%A5%E8%AF%A2/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Mysql数据库相关操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/02/16/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" target="_blank">MySQL DATABASE</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/02/16/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" class="archive-article-date">
-        <time datetime="2020-02-16T09:47:01.192Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-16</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h1 id="MySql-数据库操作"><a href="#MySql-数据库操作" class="headerlink" title="MySql 数据库操作"></a>MySql 数据库操作</h1><h2 id="创建数据库"><a href="#创建数据库" class="headerlink" title="创建数据库"></a>创建数据库</h2><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">create</span> <span class="keyword">database</span> database_name;</span><br></pre></td></tr></table></figure>
-    
-    <a class="article-more-a" href="/2020/02/16/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/02/16/Mysql%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-MySql表相关操作" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-  
-  
-    <h1 itemprop="name">
-	
-	  <a class="article-title" href="/2020/02/16/MySql%E8%A1%A8%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" target="_blank">MySQL TABLE</a>
-  
-    </h1>
-  
-
-
-  
-  
-<a href="/2020/02/16/MySql%E8%A1%A8%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/" class="archive-article-date">
-        <time datetime="2020-02-16T09:47:01.192Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-16</time>
-</a>
-
-  
-  
-    
-
-  
-  </header>
-  
-  <div class="article-entry" itemprop="articleBody">
-    
-    <h2 id="数据库中的数据类型"><a href="#数据库中的数据类型" class="headerlink" title="数据库中的数据类型"></a>数据库中的数据类型</h2><hr>
-<h3 id="可通过-help-data-types-查询所有支持的数据类型"><a href="#可通过-help-data-types-查询所有支持的数据类型" class="headerlink" title="可通过 help data types; 查询所有支持的数据类型"></a>可通过 help data types; 查询所有支持的数据类型</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql&gt; help data types;</span><br></pre></td></tr></table></figure>
-    
-    <a class="article-more-a" href="/2020/02/16/MySql%E8%A1%A8%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/#more">more >></a>
-    
-    
-
-    
-
-    
-
-  </div>
-  <div class="article-info article-info-index">
-    
-    
-    
-
-    
-    <p class="article-more-link">
-      <a class="article-more-a" href="/2020/02/16/MySql%E8%A1%A8%E7%9B%B8%E5%85%B3%E6%93%8D%E4%BD%9C/">展开全文 >></a>
-    </p>
-    
-
-    
-    <div class="clearfix"></div>
-  </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
 
 
           </div>
@@ -974,8 +464,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
